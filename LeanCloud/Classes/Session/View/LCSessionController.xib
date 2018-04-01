@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LCSessionController">
+            <connections>
+                <outlet property="bottomView" destination="oWR-3o-ECf" id="MGR-V4-g87"/>
+                <outlet property="inputField" destination="8Yd-US-evJ" id="WlP-VA-wlQ"/>
+                <outlet property="tableView" destination="923-Ve-pVa" id="PW6-aQ-rCn"/>
+                <outlet property="view" destination="GNq-GP-oKB" id="NrG-9C-Ycx"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="GNq-GP-oKB">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oWR-3o-ECf" userLabel="Bottom View">
+                    <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fn2-Og-ali">
+                            <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                            <animations/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="ojj-z1-8v9"/>
+                                <constraint firstAttribute="width" constant="44" id="v4e-MN-jI6"/>
+                            </constraints>
+                            <state key="normal" image="chat_bottom_voice_nor"/>
+                            <state key="highlighted" image="chat_bottom_voice_press"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="srL-Q1-6IG">
+                            <rect key="frame" x="556" y="0.0" width="44" height="44"/>
+                            <animations/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="l2F-uA-W6y"/>
+                                <constraint firstAttribute="width" constant="44" id="zry-F9-rM7"/>
+                            </constraints>
+                            <state key="normal" image="chat_bottom_up_nor"/>
+                            <state key="highlighted" image="chat_bottom_up_press"/>
+                        </button>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" background="chat_bottom_textfield" translatesAutoresizingMaskIntoConstraints="NO" id="8Yd-US-evJ">
+                            <rect key="frame" x="44" y="7" width="468" height="30"/>
+                            <animations/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="ihh-CS-5V7"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="2qc-FQ-idP"/>
+                            </connections>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4by-nr-w1H">
+                            <rect key="frame" x="512" y="0.0" width="44" height="44"/>
+                            <animations/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="44" id="Eg6-jB-ZPw"/>
+                                <constraint firstAttribute="height" constant="44" id="dSz-IY-7oQ"/>
+                            </constraints>
+                            <state key="normal" image="chat_bottom_smile_nor"/>
+                            <state key="highlighted" image="chat_bottom_smile_press"/>
+                        </button>
+                    </subviews>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="4by-nr-w1H" secondAttribute="bottom" id="5Mx-PZ-WUy"/>
+                        <constraint firstAttribute="height" constant="44" id="BtI-rU-1BU"/>
+                        <constraint firstItem="8Yd-US-evJ" firstAttribute="leading" secondItem="Fn2-Og-ali" secondAttribute="trailing" id="LE0-Kx-7yr"/>
+                        <constraint firstItem="srL-Q1-6IG" firstAttribute="leading" secondItem="4by-nr-w1H" secondAttribute="trailing" id="U9Z-Wi-PKT"/>
+                        <constraint firstItem="4by-nr-w1H" firstAttribute="leading" secondItem="8Yd-US-evJ" secondAttribute="trailing" id="UfO-aU-aOg"/>
+                        <constraint firstAttribute="trailing" secondItem="srL-Q1-6IG" secondAttribute="trailing" id="a4h-Oj-UuA"/>
+                        <constraint firstItem="8Yd-US-evJ" firstAttribute="centerY" secondItem="oWR-3o-ECf" secondAttribute="centerY" id="fO7-3U-G9K"/>
+                        <constraint firstItem="Fn2-Og-ali" firstAttribute="leading" secondItem="oWR-3o-ECf" secondAttribute="leading" id="grq-8I-5ZA"/>
+                        <constraint firstAttribute="bottom" secondItem="srL-Q1-6IG" secondAttribute="bottom" id="ipH-4N-wwb"/>
+                        <constraint firstAttribute="bottom" secondItem="Fn2-Og-ali" secondAttribute="bottom" id="ucq-0u-u9p"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="923-Ve-pVa">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
+                    <animations/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="cOR-gX-X2g"/>
+                        <outlet property="delegate" destination="-1" id="7vi-dU-prm"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="oWR-3o-ECf" firstAttribute="top" secondItem="923-Ve-pVa" secondAttribute="bottom" id="69L-Sc-MUJ"/>
+                <constraint firstItem="923-Ve-pVa" firstAttribute="leading" secondItem="GNq-GP-oKB" secondAttribute="leading" id="OnI-B7-KAE"/>
+                <constraint firstAttribute="bottom" secondItem="oWR-3o-ECf" secondAttribute="bottom" id="VKk-Mg-lgk"/>
+                <constraint firstItem="oWR-3o-ECf" firstAttribute="leading" secondItem="GNq-GP-oKB" secondAttribute="leading" id="Zjh-ft-MuI"/>
+                <constraint firstAttribute="trailing" secondItem="923-Ve-pVa" secondAttribute="trailing" id="brs-UW-rhd"/>
+                <constraint firstItem="923-Ve-pVa" firstAttribute="top" secondItem="GNq-GP-oKB" secondAttribute="top" id="dgW-T3-Nmq"/>
+                <constraint firstAttribute="trailing" secondItem="oWR-3o-ECf" secondAttribute="trailing" id="oVf-UF-Z8d"/>
+            </constraints>
+            <point key="canvasLocation" x="462" y="322"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="chat_bottom_smile_nor" width="34" height="34"/>
+        <image name="chat_bottom_smile_press" width="34" height="34"/>
+        <image name="chat_bottom_textfield" width="166" height="31"/>
+        <image name="chat_bottom_up_nor" width="34" height="34"/>
+        <image name="chat_bottom_up_press" width="34" height="34"/>
+        <image name="chat_bottom_voice_nor" width="34" height="34"/>
+        <image name="chat_bottom_voice_press" width="34" height="34"/>
+    </resources>
+</document>

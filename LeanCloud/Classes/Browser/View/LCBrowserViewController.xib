@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LCBrowserViewController">
+            <connections>
+                <outlet property="nextBarBtnItem" destination="K3s-d2-eB3" id="PcQ-uG-Gu8"/>
+                <outlet property="previousBarBtnItem" destination="jIJ-qZ-cn6" id="DXA-Fd-zqT"/>
+                <outlet property="view" destination="iN0-l3-epB" id="ewq-1L-RZo"/>
+                <outlet property="webView" destination="Cm1-8s-JBl" id="qfK-Pb-ZMZ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="88p-8D-gOt">
+                    <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="vHB-Qd-Nls"/>
+                    </constraints>
+                    <items>
+                        <barButtonItem title="上一页" id="jIJ-qZ-cn6">
+                            <connections>
+                                <action selector="previousPage:" destination="-1" id="hWP-Xq-bbi"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem title="下一页" id="K3s-d2-eB3">
+                            <connections>
+                                <action selector="nextPage:" destination="-1" id="7ob-hB-OcJ"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem title="收藏" id="IR8-lK-7DI">
+                            <connections>
+                                <action selector="collection:" destination="-1" id="6Vw-7t-k29"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem title="刷新" id="WJW-W1-Kge">
+                            <connections>
+                                <action selector="refresh:" destination="-1" id="wVu-Ip-VZE"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cm1-8s-JBl">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
+                    <animations/>
+                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                </webView>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="88p-8D-gOt" secondAttribute="bottom" id="43x-rG-IAj"/>
+                <constraint firstItem="Cm1-8s-JBl" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="6AI-kv-ZyA"/>
+                <constraint firstItem="88p-8D-gOt" firstAttribute="top" secondItem="Cm1-8s-JBl" secondAttribute="bottom" id="LjJ-vA-eFh"/>
+                <constraint firstItem="Cm1-8s-JBl" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="N8a-a7-fF7"/>
+                <constraint firstAttribute="trailing" secondItem="88p-8D-gOt" secondAttribute="trailing" id="P1L-Q1-dWJ"/>
+                <constraint firstItem="88p-8D-gOt" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="QHY-89-wcp"/>
+                <constraint firstAttribute="trailing" secondItem="Cm1-8s-JBl" secondAttribute="trailing" id="rQp-Jf-6Nw"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
